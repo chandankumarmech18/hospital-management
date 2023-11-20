@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/appointment.css">
+	<link rel="icon" href="/img/favicon_io/favicon.ico" />
+
+    <title>Appointment</title>
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo">
+          <a href="/page/firstPage.html"><img src="https://www.practo.com/nav/9.5.17/consumer/images/practo.svg" alt=""></a>
+            
+        </div>
+        <ul style="align-items: center;
+        display: flex;
+        text-align: center;">
+            <li>
+                <div class="dropdown">
+                    <img src="/img/bg.jpg" alt="">
+                    <span class="dropbtn">Profile
+                        <i class="fa fa-caret-down"></i>
+                    </span>
+                    <div class="dropdown-content">
+                        <a href="#" style="text-transform:capitalize;" onclick="logout()">Logout</a>
+                    </div>
+                </div>
+            </li>
+          
+        </ul>
+    </nav>
+</header>
+   <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <form action="https://formbold.com/s/FORM_ID" method="POST">
+            <div class="formbold-mb-5">
+              <label for="name" class="formbold-form-label"> Full Name </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Full Name"
+                class="formbold-form-input"
+              />
+            </div>
+            <div class="formbold-mb-5">
+              <label for="phone" class="formbold-form-label"> Phone Number </label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Enter your phone number"
+                class="formbold-form-input"
+              />
+            </div>
+            <div class="formbold-mb-5">
+              <label for="email" class="formbold-form-label"> Email Address </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                class="formbold-form-input"
+              />
+            </div>
+            <div class="flex flex-wrap formbold--mx-3">
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5 w-full">
+                  <label for="date" class="formbold-form-label"> Date </label>
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <label for="time" class="formbold-form-label"> Time </label>
+                  <input
+                    type="time"
+                    name="time"
+                    id="time"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+            </div>
+      
+            <div class="formbold-mb-5 formbold-pt-3">
+              <label class="formbold-form-label formbold-form-label-2">
+                Address Details
+              </label>
+              <div class="flex flex-wrap formbold--mx-3">
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5">
+                    <input
+                      type="text"
+                      name="area"
+                      id="area"
+                      placeholder="Enter area"
+                      class="formbold-form-input"
+                    />
+                  </div>
+                </div>
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5">
+                    <input
+                      type="text"
+                      name="city"
+                      id="city"
+                      placeholder="Enter city"
+                      class="formbold-form-input"
+                    />
+                  </div>
+                </div>
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5">
+                    <input
+                      type="text"
+                      name="state"
+                      id="state"
+                      placeholder="Enter state"
+                      class="formbold-form-input"
+                    />
+                  </div>
+                </div>
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5">
+                    <input
+                      type="text"
+                      name="post-code"
+                      id="pin-code"
+                      placeholder="Pin Code"
+                      class="formbold-form-input"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <a class="button" onclick="book()" href="#popup1">Bookiing</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Appointment</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content" style="height: 100px;
+    justify-content: center;
+    display: flex; align-items: center; color: green;">
+			Appointment Booking SuccessFull ! <br> You can check the localStorage
+		</div>
+	</div>
+</div>
+<script>
+  
+
+  function logout() {
+            // alert("logout")
+            let a = window.localStorage.getItem('Doctor name');
+
+            confirm(`Can You LogOut Doctor ${a}`);
+            window.location.href = '/index.html'
+        }
+        
+function book(){
+  let name = document.getElementById("name").value;
+  let area = document.getElementById("area").value;
+  let date = document.getElementById("date").value;
+  let time = document.getElementById("time").value;
+  window.localStorage.setItem('name',name);
+  window.localStorage.setItem('area',area);
+  window.localStorage.setItem('date',date);
+  window.localStorage.setItem('time',time);
+}
+</script>
+      <script src="/js/app.js"></script>
+</body>
+</html>

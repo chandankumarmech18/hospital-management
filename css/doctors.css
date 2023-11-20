@@ -1,0 +1,75 @@
+.doctors{
+    display: flex;
+    gap: 20px;
+    /* z-index: -1; */
+}
+.doctors .docotor_img img{
+width: 214px;
+height: 150px;
+/* height: 200px; */
+border: 1px solid;
+border: none;
+/* border-bottom: 1px solid gray; */
+}
+
+.doctors .docotor_img{
+   
+    height: 350px;
+    width: 300px;
+    cursor: pointer;
+    border: 1px solid;
+}
+.docotor_img p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.docotor_img span{
+    font-family: 500;
+}
+
+/* modal box */
+
+.submit{
+    background-color: red;
+    width: 150px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    left: 190px;
+    height: 35px;
+    border-radius: 20px;
+}
+.submit a{
+    color: #fff;
+    font-size: larger;
+}
+/* Small screens */
+@media screen and (max-width: 576px) {
+    .doctors .doctor_img {
+        width: 100%;
+    }
+
+    .submit {
+        left: 0;
+    }
+}
+
+/* Medium screens */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .doctors .doctor_img {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 769px) {
+    .doctors .doctor_img {
+        width: calc(33.33% - 20px);
+    }
+}
+/* In this example, I added media queries for small, medium, and large screens. Adjust the breakpoints and styles according to your specific design requirements. This will help ensure that your layout and styles adapt appropriately to various devices. */
+
+
+
+
+

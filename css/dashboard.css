@@ -1,0 +1,58 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-button, .view-button, .delete-button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}
+
+.edit-button {
+    background-color: #28a745;
+}
+
+.view-button {
+    background-color: #007bff;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+@media screen and (max-width: 768px) {
+    th, td {
+        padding: 10px;
+    }
+
+    .edit-button, .view-button, .delete-button {
+        padding: 6px 12px;
+        margin: 6px;
+        font-size: 12px;
+    }
+}

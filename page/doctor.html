@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/doctors.css">
+	<link rel="icon" href="/img/favicon_io/favicon.ico" />
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hopital</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/page/firstPage.html"><img src="https://www.practo.com/nav/9.5.17/consumer/images/practo.svg" alt=""></a>
+                  
+              </div>
+            <ul style="align-items: center;
+            display: flex;
+            text-align: center;">
+                <li>
+                    <div class="dropdown">
+                        <img src="/img/bg.jpg" alt="">
+                        <span class="dropbtn">Profile
+                            <i class="fa fa-caret-down"></i>
+                        </span>
+                        <div class="dropdown-content">
+                            <a href="#" style="text-transform:capitalize;" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="row g-0 text-center" style="position: relative;
+        top: 2px;">
+            <div class="col-6 col-md-2 c_h" style="flex-direction: column;
+            display: flex; border-top: 0px;">
+                <div class="img" style="padding-top: 20px;">
+                    <img src="/img/bg.jpg" style="width: 100px; height: 100px; border-radius: 50%; cursor: pointer;"
+                        alt="">
+                    <br>
+                    <a href="/index.html" style="font-size: 30px; text-decoration: none;">Admin</a>
+                </div><br>
+                
+                <a href="/page/doctor.html" style="text-decoration: none;margin:2px; padding:2px;position: relative;
+                left: -13px;">Doctor</a>
+
+                <a href="/page/home.html" style="text-decoration: none;margin:2px; padding:2px;position: relative;left: -10px;">Patients</a>
+                <!-- <a href="#">Patients</a> -->
+
+            </div>
+            <div class="col-sm-6 col-md-10 container">
+
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmation</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Do You Want To Meet Please first of all fill the form </h5>
+
+                                <!-- <p>Doctors play an essential role in human life. They help patients to get relief from
+                                    their pain</p>
+                                <p>Contact: 12345678</p> -->
+                                <br>
+                                <div class="submit">
+                                    <a style="text-decoration: none;" href="./appointment.html" type="submit">Fill The Form</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Doctor List Name</h2><br>
+                <div class="doctors">
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://media.istockphoto.com/id/1470505351/photo/portrait-of-a-smiling-doctor-holding-glasses-and-a-mobile-phone-at-the-office.webp?b=1&s=170667a&w=0&k=20&c=8CebFLF4PFnt9JYJznGhYoOQxcyHLVpTGVfkvEsZd2Q="
+                            alt="">
+                        <h5>Dr.Rakesh</h5>
+                        <p>A Cardiologist is a medical professional who treats heart disorders, high blood pressure</p>
+                        <span style="color: rgb(31 121 4);
+                        font-size: larger;">Available</span>
+
+                    </div>
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg"
+                            alt="">
+                        <h5>Dr.Umesh</h5>
+                        <p>An audiologist is a doctor who examines individuals hearing imbalance</p>
+                        <span style="    color: rgb(247 40 40);
+                        font-size: larger;">Not Available</span>
+
+
+                    </div>
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvV3WJ4b_pE9_yiiZVeTWnFoZsHEgv41rS9tcTCqE&s"
+                            alt="">
+                        <h5>Dr.Hamesh</h5>
+                        <p>Dental courses allow students to pursue a profession in the sector that focuses on the health
+                        </p>
+                        <span style="    color: rgb(247 40 40);
+                        font-size: larger;">Not Available</span>
+
+                    </div>
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://st2.depositphotos.com/1005893/5711/i/950/depositphotos_57117135-stock-photo-indian-doctor.jpg"
+                            alt="">
+                        <h5>Dr.mintu</h5>
+                        <p>Treatment for infertility, gynaecological diseases, vaginal infections (vaginitis),</p>
+                        <span style="color: rgb(31 121 4);
+                        font-size: larger;">Available</span>
+                    </div>
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://media.istockphoto.com/id/1327024466/photo/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-clinic-hall.jpg?s=612x612&w=0&k=20&c=49wqOwwuonk9f8NACL7M_5RosqQPFwJ8-dpmeo9AvQw="
+                            alt="">
+                        <h5>Dr.Mukesh</h5>
+                        <p>Treatment for infertility, gynaecological diseases, vaginal infections (vaginitis),</p>
+                        <span style="color: rgb(31 121 4);
+                        font-size: larger;">Available</span>
+
+                    </div>
+                </div>
+                <br>
+                <div class="doctors">
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://img.freepik.com/free-photo/attractive-young-male-nutriologist-lab-coat-smiling-against-white-background_662251-2960.jpg"
+                            alt="">
+                        <h5>Dr.Rakesh</h5>
+                        <p>A Cardiologist is a medical professional who treats heart disorders, high blood pressure</p>
+                        <span style="color: rgb(31 121 4);
+                        font-size: larger;">Available</span>
+
+                    </div>
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://media.istockphoto.com/id/1390000431/photo/shot-of-a-mature-doctor-using-a-digital-tablet-in-a-modern-hospital.webp?b=1&s=170667a&w=0&k=20&c=Jxhk_KZSo9oSZ01Nv8TxjCKKEVZQJFVWICZb64AEIMQ="
+                            alt="">
+                        <h5>Dr.ravi</h5>
+                        <p>Treatment for infertility, gynaecological diseases, vaginal infections (vaginitis),</p>
+                        <span style="    color: rgb(247 40 40);
+                        font-size: larger;">Not Available</span>
+
+                    </div>
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/000/859/306/small/smiling-doctor-portrait.jpg"
+                            alt="">
+                        <h5>Dr.abc</h5>
+                        <p>Treatment for infertility, gynaecological diseases, vaginal infections (vaginitis),</p>
+                        <span style="    color: rgb(247 40 40);
+                        font-size: larger;">Not Available</span>
+
+                    </div>
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/31/22/32/doctor-2027768_1280.png" alt="">
+                        <h5>Dr.Raj</h5>
+                        <p>Treatment for infertility, gynaecological diseases, vaginal infections (vaginitis),</p>
+                        <span style="    color: rgb(247 40 40);
+                        font-size: larger;">Not Available</span>
+
+                    </div>
+                    <div class="docotor_img" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onclick="c_setItem1()">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*"
+                            alt="">
+                        <h5>Dr.suresh</h5>
+                        <p>Treatment for infertility, gynaecological diseases, vaginal infections (vaginitis),</p>
+                        <span style="    color: rgb(247 40 40);
+                        font-size: larger;">Not Available</span>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        
+    </section>
+
+    <!-- <footer>
+
+    </footer> -->
+
+    <script>
+        function logout() {
+            // alert("logout")
+            let a = window.localStorage.getItem('Doctor name');
+
+            confirm(`Can You LogOut Doctor ${a}`);
+            window.location.href = '/index.html'
+        }
+        let a = document.querySelector(".docotor_img h5");
+        console.log(a.innerHTML);
+        
+        function c_setItem1() {
+            confirm(`Hey I'm Doctor do you want to meet ${window.localStorage.getItem("doctor_name")}`)
+            // alert("hhh")
+            // window.localStorage.setItem('name','umesh')
+            // window.localStorage.setItem('name','Hamesh')
+            // window.localStorage.setItem('name','mintu')
+            // window.localStorage.setItem('name','Mukesh')
+            // window.localStorage.setItem('name','Rakesh')
+            // window.localStorage.setItem('name','ravi')
+            // window.localStorage.setItem('name','abc')
+            // window.localStorage.setItem('name','Raj')
+            // window.localStorage.setItem('name','suresh')
+            console.log("object")
+            console.log(a.innerHTML);
+
+
+
+
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/doctors.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.c_h{
+    height: 300px;
+    border: 1px solid ;
+}
+
+@media screen and (max-width: 576px) {
+    .c_h {
+      height: 200px;
+    }
+  }
+  
+  /* Medium screens */
+  @media screen and (min-width: 577px) and (max-width: 992px) {
+    .c_h {
+      height: 250px;
+    }
+  }
+  
+  /* Large screens */
+  @media screen and (min-width: 993px) {
+    .c_h {
+      height: 300px;
+    }
+  }

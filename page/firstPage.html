@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/firstPage.css">
+	<link rel="icon" href="/img/favicon_io/favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>FirstPage</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/page/firstPage.html"><img src="https://www.practo.com/nav/9.5.17/consumer/images/practo.svg" alt=""></a>
+                  
+              </div>
+            <ul style="align-items: center;
+            display: flex;
+            text-align: center;">
+                <li>
+                    <div class="dropdown">
+                        <img src="/img/bg.jpg" alt="">
+                        <span class="dropbtn">Profile
+                            <i class="fa fa-caret-down"></i>
+                        </span>
+                        <div class="dropdown-content">
+                            <a href="#" style="text-transform:capitalize;" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="containe">
+            <div class="media" style="display: flex;
+            justify-content: center;
+            flex-direction: column;
+            float: left;
+            position: relative;
+            margin: auto 0;
+            left: 237px;
+            top: 99px;
+            gap: 16px;
+            
+        ">
+                <h1 style="font-size: 45px;">Making Health</h1>
+                <span style="color: #f907bf; font-size: 35px;"> Care Better Together</span>
+                <p style="color: #dedede;
+            font-size: 17px;">A doctor is a person who is qualified in medicine <br> and treats people who are ill.
+                    Doctors help patients to get relief from their pain and <br> play an essential role in human life.
+                </p>
+
+
+                <div class="c_bot">
+                    <button onclick="login()">Take Appointment</button>
+                    <button style="margin-right: 42px;
+                height: 32px;
+            " onclick="dasboard()">Go To Dasboard
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function logout() {
+            let a = window.localStorage.getItem('Doctor name');
+            confirm(`Can You LogOut Doctor ${a}`);
+
+            window.location.href = '/index.html'
+        }
+        function login() {
+            window.location.href = '/page/appointment.html'
+        }
+        function dasboard() {
+            window.location.href = '/page/home.html'
+
+        }
+    </script>
+
+</body>
+
+</html>

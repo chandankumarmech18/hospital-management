@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        select, #doctorList {
+            display: none;
+            margin: 10px;
+        }
+
+        select, button {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select Treatment</h2>
+    <select id="treatment" onchange="showDoctors()">
+        <option value="none">Select Treatment</option>
+        <option value="general">General Checkup</option>
+        <option value="dermatology">Dermatology</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="orthopedics">Orthopedics</option>
+    </select>
+
+    <h2>Available Doctors</h2>
+    <ul id="doctorList"></ul>
+
+    <script>
+        function showDoctors() {
+            const treatmentSelect = document.getElementById("treatment");
+            const doctorList = document.getElementById("doctorList");
+            
+            const selectedTreatment = treatmentSelect.value;
+            
+            // List of available doctors for each treatment
+            const doctors = {
+                none: [],
+                general: ["Dr. Smith", "Dr. Johnson"],
+                dermatology: ["Dr. White", "Dr. Brown"],
+                cardiology: ["Dr. Jones", "Dr. Wilson"],
+                orthopedics: ["Dr. Davis", "Dr. Martinez"],
+            };
+
+            // Clear the doctor list
+            doctorList.innerHTML = "";
+            
+            // Show available doctors for the selected treatment
+            for (const doctor of doctors[selectedTreatment]) {
+                const doctorItem = document.createElement("li");
+                doctorItem.textContent = doctor;
+                doctorList.appendChild(doctorItem);
+            }
+            
+            if (selectedTreatment !== "none") {
+                doctorList.style.display = "block";
+            } else {
+                doctorList.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
